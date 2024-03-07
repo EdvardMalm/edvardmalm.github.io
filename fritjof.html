@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="settning">
+        This sentence is the color: Black
+    </p>
+  
+    <label for="fargevelger">Velg en farge:</label>
+    <select id="fargevelger">
+        
+        <option value="Red">Rød</option>
+        <option value="Green">Grønn</option>
+        <option value="Blue">Blå</option>
+        <option value="Black" selected>Svart</option>
+    </select>
+  
+    <script>
+        let fargevelgerEl = document.querySelector(`#fargevelger`)
+        let ordEl = document.querySelector(`#ord`)
+        let settningEl = document.querySelector(`#settning`)
+  
+        fargevelgerEl.addEventListener("click",function(){
+            settningEl.innerHTML = `This sentence is the color: ${fargevelgerEl.value}`
+            settningEl.style.color=fargevelgerEl.value
+  
+        })
+    </script>
+</body>
+</html>
